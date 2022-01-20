@@ -68,19 +68,46 @@
 
 //! VAR GABISA BLOCK SCOPE 
 
-let a = "Saya Globe Scope" //* GLOBE SCOPE INI BISA DIGUNAKAN DIMANAPUN
-function tugas(){
-    console.log(a)
-    let b = "Saya Local Scope" //* LOCAL SCOPE INI BISA DIPANGGIL DI FUNCTION INI AJA
-    console.log(b)
-    if(true){
-        let c = "Saya Block Scope" //* BLOCK SCOPE INI BISA DIGUNAKAN DI BLOCK INI SAJA
-        console.log(c)
+// let a = "Saya Globe Scope" //* GLOBE SCOPE INI BISA DIGUNAKAN DIMANAPUN
+// function tugas(){
+//     console.log(a)
+//     let b = "Saya Local Scope" //* LOCAL SCOPE INI BISA DIPANGGIL DI FUNCTION INI AJA
+//     console.log(b)
+//     if(true){
+//         let c = "Saya Block Scope" //* BLOCK SCOPE INI BISA DIGUNAKAN DI BLOCK INI SAJA
+//         console.log(c)
+//     }
+
+
+// }
+
+// tugas()
+
+
+//* Closure 
+/**
+ * closure adalah cara mengakses variable dari parent scope di dalam child scope parent
+ */
+
+// function hello(sapa) {
+//     var text = 'Assalamualaikum'  +sapa
+//     return function(){
+//         console.log(text)
+//     }
+// }
+// var nama = hello('Fin')
+// nama()
+
+function nama(namakalian, kelas) {
+    var nama = 'nama : '  + namakalian
+    var kelas = 'kelas : ' + kelas
+
+    return function(){
+        console.log(nama)
+        console.log(kelas)
     }
-
-
 }
 
-tugas()
-
+var hasil = nama('nanda','xrpla')
+hasil()
 
