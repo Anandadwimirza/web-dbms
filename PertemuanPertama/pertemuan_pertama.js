@@ -98,16 +98,120 @@
 // var nama = hello('Fin')
 // nama()
 
-function nama(namakalian, kelas) {
-    var nama = 'nama : '  + namakalian
-    var kelas = 'kelas : ' + kelas
+// function nama(namakalian, kelas) {
+//     var nama = 'nama : '  + namakalian
+//     var kelas = 'kelas : ' + kelas
 
-    return function(){
-        console.log(nama)
-        console.log(kelas)
+//     return function(){
+//         console.log(nama)
+//         console.log(kelas)
+//     }
+// }
+
+// var hasil = nama('nanda','xrpla')
+// hasil()
+
+// * tipe data adalah karakteristik dari nilai sebuah data di js terdapat 
+/* 7 
+ * null , undefined, boolean, number, bigInt, string, dan symbol (es68)
+ *
+ * loosely typed
+ *  - yaitu variable tidak menentukan sebuah tipe data tapi
+ * nilai yang menentukan tipe data
+ */
+
+// let a = 'saya'
+// let c = 2 
+
+// console.log(typeof a)
+
+//* fungsi let */
+// let a 
+
+// function first(){
+//     a = "ini function pertama"
+//     console.log(a)
+// }
+
+// function second(){
+//     a = "ini function kedua"
+//     console.log(a)
+// }
+
+// first()
+// second()
+
+/**
+ * tipe data nulle
+ * tipe data primitf yang nilainya itu kosonh atau null
+ */
+
+// let a = null;
+// console.log(typeof a)
+
+/** 
+ * number
+ * Rentang nilai yang bisa ditampung oleh tipe data number yakni antara (2pangkat53 ...1)
+*/
+
+/** 
+ * NaN atau Not a Number
+ * NaN merupakan nilai numeric yang memberitahu bahwa nialinya itu invalid number atau bukan number
+*/
+
+// console.log('hello'/2)
+
+// let kata = 'helloworld'
+// for (let i = 0; i < kata.length; i++){
+//     console.log(kata[i])
+// }
+
+//* Boolean = sebuah tipe data yang menentukan kebenaran dan hanya memiliki 2 nilai yaitu true dan false
+
+// let belajar = true;
+// if(belajar){
+//     console.log("kelas ini sudah belajar")
+// }
+
+//* Object
+//* Object ini merupakan tipe data yang berisi props */
+
+// let object = {a}
+
+// let identitas = {
+//     firstName : 'dias',
+//     lastName : 'robot',
+//     email : 'dias@robot.com',
+//     instagram : 'utssr',
+//     linkedin : 'diashatirobot',
+//     phone :'(021) 192301',
+//     address : {
+//         streetAddress :'a',
+//         city : 'bekasi',
+//         number : '17'
+//     }
+// }
+
+// console.log('nama saya : ' + identitas.firstName + ' ' + identitas.lastName)
+// console.log('saya tinggal di : '+ identitas.address.streetAddress)
+ 
+// Memanggil object menggunakan array
+// console.log('nama saya : ' + identitas['firstName'])
+
+let transportasi = {
+    kendaraan : {
+        mobil : 'peugeot',
+        motor : 'v-xion',
+        sepeda : 'united'
+    },
+    jalan : 'Jalan berkah',
+    kota : 'bekasi',
+    platNomor : 'jabodetabek',
+    kereta : {
+        namaKa : 'argo bromo anggrek',
+        tujuan : 'senen-pasar turi'
     }
-}
 
-var hasil = nama('nanda','xrpla')
-hasil()
+}
+console.table(transportasi)
 
