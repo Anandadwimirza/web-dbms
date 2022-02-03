@@ -60,7 +60,7 @@
 //        const b = 'motor'
 //        console.log(b)
 //     }
-    
+
 // }
 // kendaraan()
 
@@ -152,12 +152,12 @@
 /** 
  * number
  * Rentang nilai yang bisa ditampung oleh tipe data number yakni antara (2pangkat53 ...1)
-*/
+ */
 
 /** 
  * NaN atau Not a Number
  * NaN merupakan nilai numeric yang memberitahu bahwa nialinya itu invalid number atau bukan number
-*/
+ */
 
 // console.log('hello'/2)
 
@@ -194,24 +194,145 @@
 
 // console.log('nama saya : ' + identitas.firstName + ' ' + identitas.lastName)
 // console.log('saya tinggal di : '+ identitas.address.streetAddress)
- 
+
 // Memanggil object menggunakan array
 // console.log('nama saya : ' + identitas['firstName'])
 
-let transportasi = {
-    kendaraan : {
-        mobil : 'peugeot',
-        motor : 'v-xion',
-        sepeda : 'united'
-    },
-    jalan : 'Jalan berkah',
-    kota : 'bekasi',
-    platNomor : 'jabodetabek',
-    kereta : {
-        namaKa : 'argo bromo anggrek',
-        tujuan : 'senen-pasar turi'
-    }
+// let transportasi = {
+//     kendaraan : {
+//         mobil : 'peugeot',
+//         motor : 'v-xion',
+//         sepeda : 'united'
+//     },
+//     jalan : 'Jalan berkah',
+//     kota : 'bekasi',
+//     platNomor : 'jabodetabek',
+//     kereta : {
+//         namaKa : 'argo bromo anggrek',
+//         tujuan : 'senen-pasar turi'
+//     }
+
+// }
+// // console.table(transportasi)
+
+// shorthan named props
+// const mobil = 'peugeot'
+// const motor = 'ninja'
+
+// console.log(`saya punya mobil ${mobil} dan motor ${motor}`)
+
+// let [a,b,c] = ['a',1,2]
+
+
+//ternarary operator
+
+// let a = 1000
+// if (a<10) {
+//     console.log('nilai A kurang dari 10')
+// }else{
+//     console.log('nilai A lebih dari 10')
+// }
+// a = 9;
+// a<10
+// ? console.log('nilai a kurang dari 10') : console.log('nilai a lebih dari 10')
+
+function a(params) {
+    console.log("saya belajar javascript")
 
 }
-console.table(transportasi)
 
+a()
+
+//anonymous function
+
+// const anon = function(params, params2) {
+//     console.log(params, params2)
+// }
+// // anon("hi","haii");
+
+// //arrow function
+
+// let third = () => {
+//     console.log("ini adalah arrow function")
+// }
+// third();
+
+/** high order FUNCTION
+ * yaitu fungsi yang menerima argumen yaitu fungsi lain
+ */
+
+// //normal function
+// function genap(number) {
+//     return number % 2 == 0
+// }
+
+// function print(number1) {
+//     let isTrue = genap(number1) 
+//     if (isTrue) {
+//         console.log(`${number1} adalah bilangan genap`)
+//     } else {
+//         console.log(`${number1} adalah bilangan ganjil`)
+//     }
+// }
+// print(2)
+
+// High Order Function
+
+// function genap(number) {
+//     return number % 2 == 0
+// }
+
+// function print(number, callback) {
+//     const isTrue = callback(number)
+//     if (isTrue) {
+//         console.log(`${number} adalah bilangan yang genap`)
+//     } else {
+//         console.log(`${number} adalah bilangan yang ganjil`)
+//     }
+// }
+// print(10, genap)
+
+// function sport(mobil) {
+//     return mobil >= 100
+// }
+
+// function warna(mobil) {
+//     return mobil == 'merah'
+// }
+
+// function kendaraan( callback, mobil) {
+//     let a = callback(mobil)
+//     if (a) {
+//         console.log(`mobil dengan ${mobil} adalah mobil saya`)
+//     } else {
+//         console.log(`mobil dengan ${mobil} bukan mobil saya`)
+//     }
+// }
+// kendaraan(warna, "merah")
+    
+
+/** terdapat 2 function 
+ * tahun <= 2001 itu gaperlu bayar pajak
+ * 
+ * cc >= 150 wajib bayar
+ * 
+ */ 
+  
+function tahun(mobil) {
+    return mobil >= 2001
+}
+
+function cc(mobil) {
+    return mobil >= 150
+}
+
+function kendaraan(callback, mobil) {
+    let a = callback(mobil)
+    if (a) {
+        console.log(`mobil ${mobil} ini bayar pajak`)
+    } else {
+        console.log(`mobil ${mobil} ini gaperlu bayar pajak`)
+    }
+    
+}
+kendaraan(cc , 120)
