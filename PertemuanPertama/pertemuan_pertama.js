@@ -335,4 +335,4 @@ function kendaraan(callback, mobil) {
     }
     
 }
-kendaraan(cc , 120)
+kendaraan(tahun , 2000)
